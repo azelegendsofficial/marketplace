@@ -532,7 +532,7 @@
         </div>
         
         <div class="games-grid" id="allGames">
-            <div class="game-card" onclick="openGame('/minecraft-bedrock')">
+            <div class="game-card" onclick="openGame('/games/minecraft-bedrock-edition')">
                 <div class="game-image">
                     <img src="https://images.unsplash.com/photo-1614732414444-096e5f1122d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Minecraft Bedrock Edition">
                     <div class="featured-badge">Featured</div>
@@ -552,7 +552,7 @@
                 </div>
             </div>
 
-            <div class="game-card" onclick="openGame('/upin-ipin-universe')">
+            <div class="game-card" onclick="openGame('/games/upin-ipin-universe')">
                 <div class="game-image">
                     <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Upin Dan Ipin Universe">
                     <div class="game-logo">
@@ -584,7 +584,7 @@
                 logo: 'https://cdn.worldvectorlogo.com/logos/minecraft-1.svg',
                 image: 'https://images.unsplash.com/photo-1614732414444-096e5f1122d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80',
                 tags: ['Sandbox', 'Adventure', 'Multiplayer'],
-                url: '/minecraft-bedrock',
+                url: '/games/minecraft-bedrock-edition',
                 featured: true
             },
             {
@@ -595,7 +595,7 @@
                 logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d0/Upin_%26_Ipin_logo.png/250px-Upin_%26_Ipin_logo.png',
                 image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80',
                 tags: ['Family', 'Adventure', 'Educational'],
-                url: '/upin-ipin-universe',
+                url: '/games/upin-ipin-universe',
                 featured: false
             }
         ];
@@ -692,9 +692,8 @@
 
         // Game click handler
         function openGame(url) {
-            // In a real application, you would navigate to the game page
-            console.log(`Opening game: ${url}`);
-            alert(`Redirecting to: ${url}\n\nThis would open the game page in a real application.`);
+            // Navigate to the game page
+            window.location.href = url;
         }
 
         // Enhanced hover effects
